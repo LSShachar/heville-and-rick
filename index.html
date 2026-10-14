@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Heville &amp; Rick · Editions</title>
+<link rel="icon" href="hr-mark.png">
+<link rel="canonical" href="https://hevilleandrick.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Heville &amp; Rick">
+<meta property="og:title" content="Heville &amp; Rick · Editions">
+<meta property="og:description" content="Limited, numbered, framed editions by independent living artists, with a share of every sale returned to the artist.">
+<meta property="og:image" content="https://hevilleandrick.com/hr-hero.jpg">
+<meta property="og:url" content="https://hevilleandrick.com/">
+<meta name="description" content="Heville & Rick publishes limited, numbered, framed giclée editions by independent living artists, with a share of every sale returned to the artist.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap">
+<style>
+  :root{
+    color-scheme: dark;
+    --ink:#0f0e0c; --ink-2:#161d14; --forest:#1b2217; --forest-2:#243020; --plum:#3b2038; --plum-2:#2a1827;
+    --bone:#ece4d4; --bone-2:#bfc2c0; /* silver */ --brass:#a97b39; --brass-hi:#d2a45c;
+    --mat:#e8e1d1; --frame:#17130f; --line:rgba(169,123,57,.38);
+    --serif:"Cormorant Garamond",Georgia,serif; --sans:"Cinzel","Trajan Pro",Georgia,serif;
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--serif);font-size:21px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1160px;margin:0 auto;padding-inline:26px}
+  .kick{font-family:var(--sans);font-weight:400;font-size:11.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--brass)}
+  :focus-visible{outline:1px solid var(--brass-hi);outline-offset:4px}
+
+  /* notice */
+  .notice{background:var(--plum);border-bottom:1px solid var(--line);text-align:center;padding:9px 16px;font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--bone-2)}
+
+  /* header */
+  header.top{border-bottom:1px solid var(--line)}
+  .head{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:18px;padding-block:26px 22px}
+  .mark{display:flex;flex-direction:column;align-items:center;gap:9px;text-decoration:none}
+  .mark img{width:86px;height:auto;opacity:.95}
+  .mark b{font-family:var(--sans);font-weight:400;color:var(--brass);font-size:clamp(20px,2.4vw,27px);letter-spacing:.08em;text-transform:uppercase;line-height:1;white-space:nowrap}
+  .mark small{font-family:var(--sans);font-size:10px;letter-spacing:.5em;text-transform:uppercase;color:var(--brass);padding-left:.5em}
+  .nav{display:flex;gap:18px;font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;flex-wrap:nowrap;white-space:nowrap}
+  .nav a{text-decoration:none;color:var(--bone-2);padding:6px 0;border-bottom:1px solid transparent}
+  .nav a:hover,.nav a[aria-current="true"]{color:var(--bone);border-color:var(--brass)}
+  .nav.r{justify-content:flex-end}
+
+  /* buttons and sections */
+  .btn{display:inline-block;border:1px solid var(--brass);color:var(--bone);text-decoration:none;padding:15px 30px;font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;background:none;cursor:pointer;transition:background .25s,color .25s}
+  .btn:hover{background:var(--brass);color:var(--ink)}
+  .btn.solid{background:var(--brass);color:var(--ink)} .btn.solid:hover{background:var(--brass-hi)}
+  .btn[disabled]{background:none;color:var(--bone-2);border-color:var(--line);cursor:default}
+  section.block{padding-block:clamp(56px,9vh,104px)}
+  .rule{border:0;border-top:1px solid var(--line);margin:0}
+  h1,h2,h3{font-weight:400;margin:0}
+  .sechead h2,.artist .who h3,.pinfo h2,.card h3,.door h3,.bag-panel h2{font-family:var(--sans);letter-spacing:.04em}
+  .back{background:none;border:0;color:var(--brass);font-family:var(--sans);font-size:11px;letter-spacing:.26em;text-transform:uppercase;cursor:pointer;padding:0;margin-bottom:26px;text-decoration:none;display:inline-block}
+  .back:hover{color:var(--brass-hi)}
+  .lede{max-width:44ch;color:var(--bone-2)}
+  .empty{color:var(--bone-2);font-style:italic;max-width:52ch}
+
+  /* home */
+  .hero{padding-block:clamp(70px,13vh,150px) clamp(56px,9vh,100px);text-align:center}
+  .hero h1{font-size:clamp(38px,6.2vw,84px);line-height:1.04;letter-spacing:.005em;max-width:15ch;margin:22px auto 26px;text-wrap:balance}
+  .hero h1 em{color:var(--brass-hi)}
+  .hero p{max-width:50ch;margin:0 auto 38px;color:var(--bone-2)}
+  .hero .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .hang{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,3vw,44px);padding-block:10px clamp(60px,9vh,100px);align-items:end}
+  .doors{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,3vw,44px)}
+  @media(max-width:900px){.doors{grid-template-columns:repeat(2,1fr)}}
+  .door{display:flex;flex-direction:column;gap:14px;text-decoration:none}
+  .door .frame{transition:transform .5s}
+  .door:hover .frame{transform:translateY(-4px)}
+  .door h3{font-size:clamp(19px,1.8vw,24px);letter-spacing:.02em}
+  .door span.go{font-family:var(--sans);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--brass)}
+  .door p{margin:0;color:var(--bone-2);font-size:18px}
+  /* the framed plate: black frame, ivory mat, picture */
+  .frame{background:var(--frame);padding:clamp(7px,1vw,12px);box-shadow:0 22px 40px -22px rgba(0,0,0,.9),inset 0 0 0 1px rgba(255,255,255,.04)}
+  .frame .mat{background:var(--mat);padding:15%;aspect-ratio:3/4;display:grid;place-items:center}
+  .frame.sq .mat{aspect-ratio:1;padding:7%}
+  .frame .mat img{width:100%;height:100%;object-fit:cover;box-shadow:inset 0 0 0 1px rgba(0,0,0,.2)}
+  .frame .mat .void{width:100%;height:100%;background:linear-gradient(160deg,#d9d1be,#c9c0aa);display:grid;place-items:center;color:#8c8369;font-family:var(--sans);font-size:10px;letter-spacing:.3em;text-transform:uppercase;text-align:center;padding:10px}
+  .frame.sq .mat .void{background:#d9d1be}
+
+  .statement{background:radial-gradient(120% 120% at 50% 0%,var(--plum),var(--plum-2) 70%);border-block:1px solid var(--line)}
+  .statement .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,6vw,96px);align-items:start}
+  .statement h2{font-size:clamp(30px,3.8vw,52px);line-height:1.1}
+  .statement p{margin:0 0 1.1em;color:var(--bone-2);max-width:56ch}
+  .statement p:first-of-type{color:var(--bone)}
+  .spec{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:20px}
+  .spec div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 22px 24px}
+  .spec dt{font-family:var(--sans);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--brass);margin-bottom:8px}
+  .spec dd{margin:0;font-size:18px;color:var(--bone-2);line-height:1.4}
+  .spec{margin-bottom:0} dl.spec{margin-block:0}
+
+  /* the establishing shot and the two-column opening, as before */
+  .banner{margin:0;border-bottom:1px solid var(--line);background:#0c0a0b}
+  .banner img{width:100%;height:auto;max-height:92vh;object-fit:cover}
+  .open{background:radial-gradient(120% 90% at 50% 0%,var(--plum),var(--ink) 72%);border-bottom:1px solid var(--line)}
+  .open .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,6vw,90px);align-items:center;padding-block:clamp(56px,10vh,110px)}
+  .open h1{font-family:var(--sans);font-weight:400;font-size:clamp(30px,4vw,54px);line-height:1.12;letter-spacing:.03em;margin:18px 0 24px;text-wrap:balance}
+  .open h1 em{color:var(--brass-hi);font-style:normal}
+  .open p{max-width:48ch;color:var(--bone-2);margin:0 0 30px}
+  .plate{margin:0;aspect-ratio:4/5;border:1px solid var(--line);background:#12160f;position:relative}
+  .plate img{position:absolute;inset:14px;width:calc(100% - 28px);height:calc(100% - 28px);object-fit:cover;object-position:50% 40%}
+  .plate::after{content:"";position:absolute;inset:14px;border:1px solid var(--line);pointer-events:none}
+  .disc{border-bottom:1px solid var(--line);background:#0c0a0b}
+  .disc .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,70px);padding-right:0;align-items:stretch}
+  .disc .words{padding-block:clamp(48px,8vh,90px);align-self:center}
+  .disc h2{font-family:var(--sans);font-weight:400;font-size:clamp(26px,3.4vw,44px);line-height:1.12;letter-spacing:.03em;color:var(--brass-hi);margin:0 0 18px}
+  .disc p{color:var(--bone-2);margin:0;max-width:46ch}
+  .disc figure{margin:0;min-height:320px;position:relative;overflow:hidden}
+  .disc figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%}
+  .disc figure::before{content:"";position:absolute;inset:0;background:linear-gradient(to right,#0c0a0b,transparent 30%);z-index:1;pointer-events:none}
+  @media (max-width:900px){.open .wrap,.disc .wrap{grid-template-columns:1fr}.disc .wrap{padding-right:26px}.disc figure{min-height:240px;margin-inline:-26px}}
+
+  /* listings */
+  .sechead{margin-bottom:46px;max-width:60ch}
+  .sechead h2{font-size:clamp(28px,4vw,50px);line-height:1.04;margin:14px 0 18px}
+  .sechead p{margin:0;color:var(--bone-2)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(30px,4vw,56px) clamp(20px,3vw,40px)}
+  .card{display:flex;flex-direction:column;gap:14px;text-decoration:none;color:inherit}
+  .card .frame{transition:transform .5s}
+  .card:hover .frame{transform:translateY(-4px)}
+  .card h3{font-size:clamp(17px,1.5vw,21px);line-height:1.15;letter-spacing:.01em}
+  .card .by{font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass)}
+  .card .row{display:flex;justify-content:space-between;gap:10px;color:var(--bone-2);font-size:17px;border-top:1px solid var(--line);padding-top:10px}
+  .card .row b{font-weight:400;color:var(--bone);font-variant-numeric:tabular-nums}
+  .tagout{color:#b78d8d}
+
+  /* artists */
+  .artist{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,80px);padding-block:clamp(40px,7vh,76px);border-top:1px solid var(--line)}
+  .artist:first-of-type{border-top:0;padding-top:0}
+  .artist .who h3{font-size:clamp(26px,3vw,40px);line-height:1.08;margin:12px 0 10px}
+  .artist .who .line{font-style:italic;color:var(--bone-2);margin:0}
+  .artist .bio p{margin:0 0 1.1em;max-width:58ch;color:var(--bone-2)}
+  .artist .bio p:first-child{color:var(--bone)}
+  .works{grid-column:1 / -1;margin-top:10px}
+  .works .kick{display:block;margin-bottom:20px}
+  .works .grid{grid-template-columns:repeat(4,1fr)}
+  .portrait{max-width:280px;margin-top:18px}
+
+  /* product */
+  .pview{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,6vw,90px);align-items:start}
+  .gal .frame{max-width:560px}
+  .thumbs{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+  .thumbs button{width:62px;height:62px;padding:0;border:1px solid var(--line);background:var(--ink-2);cursor:pointer}
+  .thumbs button[aria-current="true"]{border-color:var(--brass-hi)}
+  .thumbs img{width:100%;height:100%;object-fit:cover}
+  .pinfo h2{font-size:clamp(26px,3.2vw,42px);line-height:1.06;margin:12px 0 8px}
+  .pinfo .by{font-family:var(--sans);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--brass);text-decoration:none}
+  .pinfo .pprice{font-size:26px;margin:22px 0 22px;font-variant-numeric:tabular-nums}
+  .pinfo .ed{color:var(--bone-2);font-style:italic;margin:0 0 20px}
+  .opt{display:flex;flex-direction:column;gap:7px;margin:0 0 16px}
+  .opt label{font-family:var(--sans);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--brass)}
+  .opt select{font:inherit;font-size:19px;background:var(--ink-2);color:var(--bone);border:1px solid var(--line);padding:11px 12px;max-width:340px}
+  .pdesc{color:var(--bone-2);white-space:pre-line;margin:28px 0 0;max-width:52ch}
+  .pnote{margin:26px 0 0;padding-top:18px;border-top:1px solid var(--line);font-size:17px;color:var(--bone-2);max-width:52ch}
+
+  footer{border-top:1px solid var(--line);padding-block:44px 60px;margin-top:30px}
+  /* The Orangery: the glasshouse room keeps the house frame but turns to daylight */
+  body.glass{--ink:#f4f1e4;--bone:#1c2a22;--bone-2:#3e4b42;--brass:#2f6b47;--brass-hi:#1f4a33;--line:rgba(47,107,71,.30);--mat:#ffffff;--frame:#dce2d2;background:#f4f1e4;color:#1c2a22;color-scheme:light}
+  body.glass #v-shelf{background:linear-gradient(90deg,transparent calc(100% - 2px),rgba(255,255,255,.9) 0) 0 0/12.5% 100%,#eef2e4}
+  body.glass .card .obj,body.glass .card .frame{background:#ffffff}
+  body.glass .btn{color:#1c2a22} body.glass .btn.solid{color:#f4f1e4}
+  .glass-notes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:40px;border-top:1px solid var(--line);padding-top:28px}
+  .glass-notes h3{font-family:var(--sans);font-size:17px;letter-spacing:.04em;margin:8px 0 4px}
+  .glass-notes p{margin:0;font-size:16px;color:var(--bone-2)}
+  .glass-notes i{display:block;width:22px;height:22px;border-radius:50%}
+  @media(max-width:760px){.glass-notes{grid-template-columns:1fr 1fr}}
+  footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:16px;color:var(--bone-2)}
+  footer a{text-decoration:none;border-bottom:1px solid var(--line)}
+  footer .name{font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:var(--bone)}
+
+  /* bag */
+  .bag-panel{position:fixed;top:0;right:0;bottom:0;z-index:80;width:min(430px,100%);background:var(--ink-2);border-left:1px solid var(--line);box-shadow:-20px 0 40px rgba(0,0,0,.55);display:flex;flex-direction:column;transform:translateX(104%);transition:transform .35s}
+  .bag-panel.open{transform:none}
+  .bag-panel header{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-bottom:1px solid var(--line)}
+  .bag-panel h2{font-size:26px}
+  .bag-panel .x{background:none;border:0;color:var(--bone-2);font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;cursor:pointer}
+  .bag-lines{flex:1;overflow:auto;padding:8px 24px;list-style:none;margin:0}
+  .bag-lines li{display:grid;grid-template-columns:60px 1fr auto;gap:14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+  .bag-lines img{width:60px;height:80px;object-fit:cover;border:1px solid var(--line)}
+  .bag-lines .t{font-size:18px;line-height:1.25}.bag-lines .v{font-size:14px;color:var(--bone-2)}
+  .qty{display:flex;align-items:center;gap:8px;margin-top:6px}
+  .qty button{width:26px;height:26px;background:none;border:1px solid var(--line);color:var(--bone);cursor:pointer;font:inherit;line-height:1}
+  .bag-foot{padding:20px 24px 26px;border-top:1px solid var(--line)}
+  .bag-foot .sub{display:flex;justify-content:space-between;font-size:20px;margin-bottom:6px}
+  .bag-foot small{display:block;color:var(--bone-2);font-size:14px;margin-bottom:16px}
+  .bag-foot .btn{width:100%;text-align:center}
+  .bag-empty{color:var(--bone-2);font-style:italic;padding:22px 0}
+  .scrim{position:fixed;inset:0;z-index:79;background:rgba(0,0,0,.55)}
+  .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--bone);color:var(--ink);padding:11px 20px;font-size:16px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:90}
+  .toast.on{opacity:1}
+
+  /* owner editing (text only) */
+  .hr-edit-pill{position:fixed;right:14px;bottom:14px;z-index:50;background:rgba(18,15,16,.88);border:1px solid var(--line);color:var(--bone-2);font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:9px 14px;cursor:pointer}
+  .hr-bar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#0b0909;border-top:1px solid var(--brass);display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;padding:12px 20px;font-size:16px;color:var(--bone-2)}
+  .hr-bar button{background:none;border:0;color:var(--bone);font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;padding:0}
+  body.hr-editing{padding-bottom:80px}
+  body.hr-editing [data-edit]{outline:1px dashed rgba(205,176,122,.45);outline-offset:3px;cursor:text}
+
+  @media (max-width:980px){
+    .statement .wrap,.artist,.pview{grid-template-columns:1fr}
+    .grid,.works .grid{grid-template-columns:repeat(2,1fr)}
+    .spec{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:680px){
+    body{font-size:19px}
+    .head{grid-template-columns:1fr;justify-items:center;gap:16px}
+    .nav,.nav.r{justify-content:center;gap:8px 18px;flex-wrap:wrap}
+    .hang,.doors{grid-template-columns:1fr;max-width:380px;margin-inline:auto}
+    .hang .frame:nth-child(n+2){display:none}
+    .grid,.works .grid{grid-template-columns:1fr;max-width:420px}
+    .spec{grid-template-columns:1fr}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.frame{transition:none}}
+
+  /* ---- Perrotin-style light house: ink on grey, heavier lines ---- */
+  :root{
+    color-scheme: light;
+    --ink:#f1f1ef; --ink-2:#e4e4e1; --bone:#0b0a09; --bone-2:#3d3d3a;
+    --brass:#6b4a17; --brass-hi:#3f2b0b; --line:rgba(11,10,9,.62);
+    --mono:"Libre Caslon Text","Big Caslon","Iowan Old Style",Georgia,serif;   /* gallery serif, after Hauser & Wirth */
+  }
+  body{font-weight:600}
+  a{font-weight:inherit}
+  .sechead p,.lede,.artist .bio p,.artist .who .line,.pdesc,.pnote,.empty,.door p,.card .row{font-weight:600}
+  header.top{position:sticky;top:0;z-index:40;background:rgba(222,222,220,.9);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:2px solid var(--line)}
+  .head{display:flex;align-items:center;justify-content:space-between;gap:26px;padding-block:20px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:#0b0a09}
+  .brand b{font-family:var(--sans);font-weight:700;font-size:clamp(20px,2vw,27px);letter-spacing:.07em;text-transform:uppercase;white-space:nowrap;line-height:1}
+  .brand img{height:58px;width:auto}
+  .nav{font-family:var(--mono);font-weight:700;font-size:13.5px;letter-spacing:.04em;gap:26px;flex-wrap:wrap;white-space:nowrap;text-transform:uppercase}
+  .nav a{color:#0b0a09;border-bottom:2px solid transparent;padding:4px 0}
+  .nav a:hover,.nav a[aria-current="true"]{color:#0b0a09;border-color:#0b0a09}
+  .nav.main{flex:1;justify-content:center}
+  .btn{border:2px solid #0b0a09;color:#0b0a09;font-family:var(--mono);font-weight:700;letter-spacing:.06em}
+  .btn:hover{background:#0b0a09;color:#f1f1ef}
+  .btn.solid{background:#0b0a09;color:#f1f1ef}.btn.solid:hover{background:#3d3d3a}
+  .kick,.card .by,.pinfo .by,.opt label,.spec dt,.back,.door span.go{font-family:var(--mono);font-weight:700;letter-spacing:.08em;color:var(--brass)}
+  .frame{box-shadow:0 14px 26px -16px rgba(0,0,0,.5);background:#0b0a09}
+  .card .row,.spec,.spec div,.artist{border-color:var(--line)}
+  .card .row{border-top-width:2px}
+  .artist{border-top-width:2px}
+  .frame .mat .void{color:#6f6753}
+  .bag-panel{background:#ecece9}
+  .bag-lines li{border-bottom-width:2px}
+  /* the gallery room */
+  .room{position:relative;height:min(76vh,700px);min-height:420px;background:linear-gradient(#cacac8 0 80%,#b3aea6 80% 100%);overflow:hidden;border-bottom:2px solid var(--line)}
+  .room .w{position:absolute;bottom:20%;box-shadow:0 0 0 5px #d6c6a1,0 0 0 7px rgba(0,0,0,.45),18px 26px 30px -14px rgba(0,0,0,.45)}
+  .room .w1{left:7%;width:13%;height:30%;bottom:34%;background:repeating-linear-gradient(115deg,#d9d6cc 0 6px,#6b6a64 6px 9px,#efede6 9px 18px)}
+  .room .w2{left:30%;width:32%;height:48%;bottom:24%;background:radial-gradient(circle at 30% 40%,#5a3a57,#3b2038 70%)}
+  .room .w3{left:72%;width:20%;height:44%;bottom:26%;background:linear-gradient(160deg,#2c3b27,#1b2217)}
+  .caption{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-block:22px;font-family:var(--mono);font-weight:700;font-size:14px;letter-spacing:.05em;text-transform:uppercase}
+  .bag-panel{box-shadow:none}.bag-panel.open{box-shadow:-20px 0 40px rgba(0,0,0,.35)}
+  .nav{font-size:12.5px;gap:20px}.head{gap:18px}
+  h1,h2,h3,.sechead h2,.card h3,.door h3,.artist .who h3,.pinfo h2{font-weight:700}
+  footer .name{font-weight:700;color:#0b0a09}
+  @media (max-width:1100px){.nav.main{order:3;flex:0 0 100%;justify-content:center;gap:10px 22px}}
+  @media (max-width:680px){.head{justify-content:center}.brand img{height:40px}.nav.r{width:100%;justify-content:center}.room .w1{display:none}.room .w2{left:8%;width:50%}.room .w3{left:66%;width:26%}}
+
+  /* ---- magazine cover: the illustration opens the house, with an article bar along its foot ---- */
+  header.top{background:rgba(255,255,255,.96);border-bottom:1px solid rgba(11,10,9,.35)}
+  .cover{display:block;position:relative;color:#fff;text-decoration:none;border-bottom:2px solid var(--line);background:#2b1b2a}
+  .cover img{width:100%;height:min(88vh,1080px);min-height:380px;object-fit:cover;object-position:50% 45%;display:block}
+  .cover-bar{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:baseline;gap:14px 28px;flex-wrap:wrap;padding:18px max(26px,calc((100% - 1160px)/2 + 26px)) 20px;background:rgba(18,12,20,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-top:1px solid rgba(255,255,255,.25)}
+  .cover-kick{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#e2c48f}
+  .cover-title{font-family:var(--mono);font-weight:700;font-size:clamp(19px,2.4vw,32px);letter-spacing:.01em;line-height:1.15;flex:1;min-width:0;text-wrap:balance}
+  .cover-go{font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid #fff;padding:9px 16px;white-space:nowrap}
+  .cover:hover .cover-go{background:#fff;color:#1a1218}
+  .cover:hover .cover-title{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1.5px}
+  .credit{position:absolute;top:14px;right:16px;font-family:var(--mono);font-weight:700;font-size:11px;letter-spacing:.04em;color:#fff;background:rgba(18,12,20,.62);padding:5px 9px}
+  .art-fig figcaption{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.04em;color:var(--bone-2);margin-top:8px}
+  .nav{font-size:13px;gap:22px;letter-spacing:.12em}
+  .cover-title{letter-spacing:.02em;font-weight:400}
+  .kick,.card .by,.pinfo .by,.opt label,.spec dt,.back,.door span.go,.cover-kick,.cover-go,.caption{letter-spacing:.14em}
+  .art-fig{margin:0 0 30px}.art-fig img{width:100%;height:auto;border:2px solid var(--line)}
+  #v-house .sechead h2{font-family:var(--mono);letter-spacing:0;font-size:clamp(28px,3.6vw,46px);line-height:1.12;text-wrap:balance}
+  @media (max-width:680px){.cover img{height:62vh}.cover-bar{position:static;background:#1a1218}}
+  /* ---- the About essay and its pull quotes ---- */
+  .essay p{max-width:62ch;line-height:1.62;margin:0 0 1.15em}
+  .pull{margin:1.6em 0 1.8em;padding:22px 0 20px;border-top:2px solid var(--brass);border-bottom:1px solid var(--line);max-width:30ch}
+  .pull p{margin:0;font-family:var(--mono);font-weight:400;font-style:italic;font-size:clamp(24px,2.8vw,34px);line-height:1.22;letter-spacing:0;color:var(--bone);text-wrap:balance}
+  @media (min-width:1100px){#v-house .wrap{max-width:900px!important}}
+  .dek{font-family:var(--mono);font-style:italic;font-size:clamp(21px,2.3vw,28px);line-height:1.3;color:var(--bone);margin:18px 0 0;max-width:34ch;padding-left:18px;border-left:3px solid var(--brass)}
+  .pull{background:#3b2038;padding:26px 30px 28px;border-top:3px solid #c9a46a;border-bottom:0;max-width:34ch}
+  .pull p{color:#f4eef4}
+  .obj{background:#e6e4df;aspect-ratio:1;display:grid;place-items:center;max-width:100%}
+  .obj.tall{aspect-ratio:3/4}
+  .obj svg{width:62%;height:auto}
+  .door:hover .obj{background:#dedbd5}
+  .obj.photo{background:#e6e4df}.obj.photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .pimg{background:#e6e4df;max-width:620px}.pimg img{width:100%;height:auto;display:block}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap head">
+    <a class="brand" href="#" aria-label="Heville and Rick, home"><img src="hr-mark-drawn.svg" alt="" width="660" height="559"><b>Heville &amp; Rick</b></a>
+    <nav class="nav main" aria-label="Menu" id="nav">
+      <a href="#artists" data-v="artists">Artists</a>
+      <a href="#house" data-v="house">About</a>
+      <a href="#media" data-v="media">Media</a>
+      <a href="#prints" data-v="prints">Collect</a>
+      <a href="#objets" data-v="objets">Objet d’art</a>
+      <a href="https://theorangery.hevilleandrick.com/">The Orangery</a>
+    </nav>
+    <nav class="nav r" aria-label="Bag"><a href="#" id="bag">Bag (0)</a></nav>
+  </div>
+</header>
+
+<main>
+<div id="v-home">
+  <a class="cover" href="#house" aria-label="How We Support Art, And How You Can Too">
+    <img src="hr-hero.jpg" alt="Two dancers in evening dress waltz through a vaulted gallery as framed paintings float and burst into flowers" width="1920" height="1278">
+    <span class="cover-bar"><span class="cover-kick">About the House</span><span class="cover-title">How We Support Art, And How You Can Too</span><span class="cover-go">Read →</span></span>
+    <span class="credit">Illustration: Jazzy Yuan, Lisbon, Portugal</span>
+  </a>
+  <section class="block" style="padding-top:20px">
+    <div class="wrap doors">
+      <a class="door" href="#prints"><div class="frame"><div class="mat"><div class="void">Prints</div></div></div><h3>Collect</h3><p>Framed limited-edition prints from the current season.</p><span class="go">View →</span></a>
+      <a class="door" href="#objets"><div class="obj tall"><svg viewBox="0 0 200 200" aria-hidden="true"><path d="M70 94 C70 22 112 22 112 94" fill="none" stroke="#aaa69d" stroke-width="5"/><path d="M88 94 C88 22 130 22 130 94" fill="none" stroke="#b3afa5" stroke-width="5"/><rect x="54" y="92" width="92" height="88" fill="#c4c0b6"/><rect x="54" y="92" width="92" height="7" fill="#b3afa5"/></svg></div><h3>Objet d’art</h3><p>Objects bearing the current season’s designs.</p><span class="go">View →</span></a>
+      <a class="door" href="https://theorangery.hevilleandrick.com/"><div class="obj tall"><svg viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" fill="#eef2e4"/><path d="M60 72 C80 44 120 44 140 76 C112 84 84 86 60 72Z" fill="#3f6b4f"/><circle cx="100" cy="124" r="44" fill="#e9962f"/><circle cx="86" cy="108" r="10" fill="#f2b866"/></svg></div><h3>The Orangery</h3><p>Candles, soaps and scents from the glasshouse, dressed in the season’s artwork.</p><span class="go">Enter →</span></a>
+      <a class="door" href="#artists"><div class="frame"><div class="mat"><div class="void">Artists</div></div></div><h3>Artists</h3><p>The artists of the current season.</p><span class="go">View →</span></a>
+    </div>
+  </section>
+</div>
+
+<section class="block" id="v-text" hidden>
+  <div class="wrap">
+    <div class="sechead"><span class="kick" id="txKick">Heville &amp; Rick</span><h2 id="txTitle"></h2><p id="txLede"></p></div>
+    <div class="grid"><div class="card"><div class="frame"><div class="mat"><div class="void">Image</div></div></div><h3>Title</h3><div class="row"><span>00.00.0000</span><b>Read</b></div></div>
+    <div class="card"><div class="frame"><div class="mat"><div class="void">Image</div></div></div><h3>Title</h3><div class="row"><span>00.00.0000</span><b>Read</b></div></div>
+    <div class="card"><div class="frame"><div class="mat"><div class="void">Image</div></div></div><h3>Title</h3><div class="row"><span>00.00.0000</span><b>Read</b></div></div></div>
+  </div>
+</section>
+
+<section class="block" id="v-shelf" hidden>
+  <div class="wrap">
+    <div class="sechead"><span class="kick" id="shKick"></span><h2 id="shTitle"></h2><p id="shLede"></p></div>
+    <div class="grid" id="shGrid"></div>
+    <div class="glass-notes" id="glassNotes" hidden>
+      <div><i style="background:#e9962f"></i><h3>Neroli Under Glass</h3><p>Orange blossom, petitgrain, warm glass.</p></div>
+      <div><i style="background:#6c8f55"></i><h3>Bergamot &amp; Fig Leaf</h3><p>Bergamot, green fig, terracotta.</p></div>
+      <div><i style="background:#e3c14e"></i><h3>The Pinery</h3><p>Pineapple, cut grass, tanbark.</p></div>
+      <div><i style="background:#2f6b47"></i><h3>Banana Leaf &amp; Vetiver</h3><p>After the Cavendish banana, first raised under glass at Chatsworth.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="v-artists" hidden>
+  <div class="wrap">
+    <div class="sechead"><span class="kick">Current season</span><h2>Artists</h2><p data-edit="h2-art-lede">The artists of the current season, with their biographies and works.</p></div>
+    <div id="artList"></div>
+  </div>
+</section>
+
+<section class="block" id="v-house" hidden>
+  <div class="wrap" style="max-width:820px">
+    <div class="sechead"><span class="kick">About the House</span><h2>How We Support Art, And How You Can Too</h2><p class="dek" data-edit="h2-about-dek">We never imagined that a gallery would be the best vehicle for our social-impact aspirations.</p></div>
+    <figure class="art-fig"><img src="hr-banner.jpg" alt="The Heville &amp; Rick lion in its octagon, from the house&rsquo;s years as a fashion house" width="1670" height="941" loading="lazy"></figure>
+    <div class="essay">
+    <p data-edit="h2-about-1">Heville &amp; Rick began as a fashion house, with a set of values that eventually led us to what we do today. We never imagined that a gallery would be the best vehicle for our social-impact aspirations. That changed when we watched technology put artists and graphic designers out of business.</p>
+    <p data-edit="h2-about-2">When the livelihood of those who have committed their lives to giving shape to our shared vision is threatened, we are all threatened with blindness. Without the dialogue that takes place through art, no discourse can be fully processed, whatever its subject.</p>
+    <p data-edit="h2-about-3">This foundational threat made us realise that the fault lines have shifted to a deeper place than mere social justice. They now run through human discourse itself: through whether art, as a form of dialogue, can remain a viable voice against an economic expediency that has allied itself with the radical use of technology. The economy is structurally blind to the plight of poets and writers, artists and thinkers, because those who cultivate vision necessarily do so at the expense of economically legible deliverables.</p>
+    <blockquote class="pull"><p>The fault lines have shifted to a deeper place than mere social justice.</p></blockquote>
+    <p data-edit="h2-about-4">With every purchase, we vote for our values. Awareness of that fact is the only way to take part morally in economies of scale, which now exceed ordinary democratic government in reach, and therefore in power. We set out to create a space where those votes can be cast in support of working artists.</p>
+    <p data-edit="h2-about-5">Some decisions followed from this conviction. The first is a revenue share system where a large portion of the proceeds goes directly to the artist, while the remainder sustains the house. The second is a seasonal rotation that allows us to platform a larger group of artists each year, with reliability and consistency.</p>
+    <blockquote class="pull"><p>A revenue share system where a large portion of the proceeds goes directly to the artist.</p></blockquote>
+    <p data-edit="h2-about-6">A third decision concerns which artists we aim to support. There was once such a thing as functional music. A musician&rsquo;s experimentation was funded by venues that needed music, because without a musician there was no music to be had. With infinite reproduction and digitisation, functional music went out of business. It is the artists of this functional tier, not only those aiming at galleries and the Gagosians of the world, who most need a spotlight. Graphic designers and illustrators are the people we want our gallery to support.</p>
+    <blockquote class="pull"><p>Graphic designers and illustrators are the people we want our gallery to support.</p></blockquote>
+    <p data-edit="h2-about-7">Our answer is a marketplace where these artists can be platformed and supported, and where their audiences can gather around a house that represents their values. We are not among the one percent whose cheques could solve this outright with a fund or a trust, an idea that may sound naive even as a suggestion. What we can do is build a space where your money flows to these artists, through the more traditional practice of collecting art.</p>
+    <p data-edit="h2-about-8">Each season, we commission our artists to compose variations on a single theme in their own style. From these we issue limited editions of gallery-quality prints, each with a certificate of authenticity and framed to the highest standard.</p>
+    </div>
+    <p style="margin-top:34px"><a class="btn" href="#artists">Artists</a></p>
+  </div>
+</section>
+
+<section class="block" id="v-product" hidden aria-live="polite">
+  <div class="wrap">
+    <button class="back" id="pBack" type="button">← Back</button>
+    <div class="pview" id="pView"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="name" data-edit="h2-foot">Heville &amp; Rick</span>
+    <span>© 2026 House of Heville &amp; Rick · A house of <a href="https://ontokinesis.com/company/">Ontokinesis Applied Systems</a> · <a href="/privacy.html">Privacy</a></span>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="bag-panel" id="bagPanel" aria-label="Bag" aria-hidden="true">
+  <header><h2>Bag</h2><button class="x" id="bagClose" type="button">Close</button></header>
+  <ul class="bag-lines" id="bagLines"></ul>
+  <div class="bag-foot" id="bagFoot"></div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+<script>
+/* A small bridge to the Shopify store (Storefront API).
+   Used by the Heville & Rick page (collections, product pages, bag) and by the Support page (the coffee).
+   The storefront token is public by design: it can only read published products and make carts. */
+window.SHOP = (() => {
+  const CFG = {
+    domain: 'uz01gp-ge.myshopify.com',
+    token: 'a174cb76b040fc58070e0007693aec9b',
+    version: '2026-01',
+  };
+  const ready = !!CFG.token && !CFG.token.startsWith('__');
+  const endpoint = `https://${CFG.domain}/api/${CFG.version}/graphql.json`;
+
+  async function gql(query, variables = {}) {
+    const r = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Shopify-Storefront-Access-Token': CFG.token },
+      body: JSON.stringify({ query, variables }),
+    });
+    const body = await r.json().catch(() => ({}));
+    if (!r.ok || body.errors) throw new Error((body.errors && body.errors[0] && body.errors[0].message) || `Store unavailable (${r.status})`);
+    return body.data;
+  }
+
+  const money = m => m ? new Intl.NumberFormat('en-US', { style: 'currency', currency: m.currencyCode }).format(Number(m.amount)) : '';
+
+  const PRODUCT = `id handle title description availableForSale vendor tags
+    featuredImage { url altText }
+    images(first: 8) { nodes { url altText } }
+    priceRange { minVariantPrice { amount currencyCode } maxVariantPrice { amount currencyCode } }
+    options { name optionValues { name } }
+    variants(first: 100) { nodes { id title availableForSale price { amount currencyCode } selectedOptions { name value } image { url altText } } }`;
+
+  async function collections() {
+    const d = await gql(`query { collections(first: 30) { nodes { handle title products(first: 100) { nodes { ${PRODUCT} } } } } }`);
+    return d.collections.nodes;
+  }
+  async function product(handle) {
+    const d = await gql(`query($h: String!) { product(handle: $h) { ${PRODUCT} } }`, { h: handle });
+    return d.product;
+  }
+
+  /* ---------- the bag (a Shopify cart, remembered in this browser) ---------- */
+  const KEY = 'hr-cart-id';
+  const CART = `id checkoutUrl totalQuantity
+    cost { subtotalAmount { amount currencyCode } }
+    lines(first: 100) { nodes { id quantity
+      cost { totalAmount { amount currencyCode } }
+      merchandise { ... on ProductVariant { id title image { url altText } price { amount currencyCode } product { title handle featuredImage { url altText } } } } } }`;
+  const store = {
+    get(){ try { return localStorage.getItem(KEY); } catch(e){ return null; } },
+    set(v){ try { v ? localStorage.setItem(KEY, v) : localStorage.removeItem(KEY); } catch(e){} },
+  };
+  const check = (res, name) => {
+    const errs = res[name] && res[name].userErrors;
+    if (errs && errs.length) throw new Error(errs[0].message);
+    return res[name].cart;
+  };
+  async function getCart() {
+    const id = store.get(); if (!id) return null;
+    const d = await gql(`query($id: ID!) { cart(id: $id) { ${CART} } }`, { id });
+    if (!d.cart) store.set(null);
+    return d.cart;
+  }
+  async function add(variantId, quantity = 1) {
+    const id = store.get();
+    if (id) {
+      try {
+        const d = await gql(`mutation($id: ID!, $lines: [CartLineInput!]!) { cartLinesAdd(cartId: $id, lines: $lines) { cart { ${CART} } userErrors { message } } }`,
+          { id, lines: [{ merchandiseId: variantId, quantity }] });
+        const c = check(d, 'cartLinesAdd'); if (c) return c;
+      } catch (e) { store.set(null); }
+    }
+    const d = await gql(`mutation($lines: [CartLineInput!]!) { cartCreate(input: { lines: $lines }) { cart { ${CART} } userErrors { message } } }`,
+      { lines: [{ merchandiseId: variantId, quantity }] });
+    const c = check(d, 'cartCreate'); store.set(c.id); return c;
+  }
+  async function setQty(lineId, quantity) {
+    const id = store.get();
+    const d = quantity > 0
+      ? await gql(`mutation($id: ID!, $lines: [CartLineUpdateInput!]!) { cartLinesUpdate(cartId: $id, lines: $lines) { cart { ${CART} } userErrors { message } } }`, { id, lines: [{ id: lineId, quantity }] })
+      : await gql(`mutation($id: ID!, $ids: [ID!]!) { cartLinesRemove(cartId: $id, lineIds: $ids) { cart { ${CART} } userErrors { message } } }`, { id, ids: [lineId] });
+    return check(d, quantity > 0 ? 'cartLinesUpdate' : 'cartLinesRemove');
+  }
+  /* a one-off purchase straight to checkout (the coffee) */
+  async function buyNow(variantId, quantity = 1) {
+    const d = await gql(`mutation($lines: [CartLineInput!]!) { cartCreate(input: { lines: $lines }) { cart { checkoutUrl } userErrors { message } } }`,
+      { lines: [{ merchandiseId: variantId, quantity }] });
+    return check(d, 'cartCreate').checkoutUrl;
+  }
+
+  return { ready, gql, money, collections, product, cart: { get: getCart, add, setQty }, buyNow };
+})();
+</script>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const slug = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const sized = (url, w) => url + (url.includes('?') ? '&' : '?') + 'width=' + w;
+
+  /* ------------------------------------------------------------------
+     THE ARTISTS. One entry per artist; leave the list empty until the season is announced.
+       name:  exactly as it appears in the product's Vendor field in Shopify (that is how the works are found)
+       line:  discipline and place, one short line
+       bio:   array of paragraphs
+       image: optional portrait file name
+     Any artist who has products in Shopify but no entry here still appears, with the name only.
+     ------------------------------------------------------------------ */
+  const ARTISTS = [
+    // { name: 'Artist Name', line: 'Painter · City', bio: ['First paragraph.', 'Second paragraph.'], image: '' },
+    { name: 'Ines Valtorre', line: 'Illustrator · Porto', bio: [
+      'Ines Valtorre is an illustrator working between Porto and Lisbon. She trained in architecture before turning to drawing, and her work keeps the draughtsman’s habits: isometric projection, repeated units, and rooms that fold back on themselves.',
+      'Her patterns are drawn by hand as single tiles and then repeated, so that each sheet reads as a city without edges. Nocturne Stair is her first edition with the house.',
+      'Sample profile for testing the house. Ines Valtorre is a fictional artist.' ], image: '' },
+  ];
+  /* pictures kept on this site for products whose Shopify photos have not been added yet */
+  const LOCAL_IMG = {
+    'nocturne-stair': ['hr-sample-artwork.jpg', 'hr-sample-room.jpg', 'hr-sample-framed.jpg'],
+    'nocturne-stair-tote': ['hr-sample-tote.jpg'],
+  };
+
+  /* the Shopify collections behind each shelf */
+  const SHELVES = {
+    prints:  { handle: 'prints',      kick: 'Current season', title: 'Collect',
+               lede: 'Limited-edition giclée prints, framed. 18 × 24 in and 12 × 16 in.',
+               empty: 'No works are available yet.' },
+    objets:  { handle: 'objets-dart', kick: 'Current season', title: 'Objet d’art',
+               lede: 'Objects bearing the current season’s designs. Made to order.',
+               empty: 'No objects are available yet.' },
+    orangery:{ handle: 'the-orangery', kick: 'The Orangery at Heville & Rick', title: 'The Orangery',
+               lede: 'Citrus, leaf and warm glass. Each scent comes as a candle, a soap and an eau de parfum, dressed in the season’s artwork. A share of every purchase goes to this season’s artists.',
+               empty: 'The first season of scents is being prepared.' },
+    archive: { handle: 'archive',     kick: 'Past seasons', title: 'Archive',
+               lede: 'Works from past seasons. These editions are closed.',
+               empty: 'No past seasons yet.' },
+  };
+
+  /* SKELETON: while true and the store holds nothing yet, stand-in artists and works are drawn so the layout can be judged.
+     Set to false (or simply add real artists and products) when the real data arrives. */
+  const SKELETON = true;
+  const LOREM = ['Biography. Background, training and practice.', 'Selected exhibitions, commissions and publications.'];
+  const STAND = ['Artist One','Artist Two','Artist Three','Artist Four'].map((n,i) => ({ name: n, line: 'Medium · City', bio: LOREM, stand: true }));
+  const SIL = '<svg viewBox="0 0 120 160" aria-hidden="true" style="width:100%;height:100%"><rect width="120" height="160" fill="#cfc6b0"/><circle cx="60" cy="62" r="25" fill="#a79d84"/><path d="M12 160c0-34 21-52 48-52s48 18 48 52z" fill="#a79d84"/></svg>';
+  const TOTE = '<svg viewBox="0 0 200 200" aria-hidden="true"><path d="M70 94 C70 22 112 22 112 94" fill="none" stroke="#aaa69d" stroke-width="5"/><path d="M88 94 C88 22 130 22 130 94" fill="none" stroke="#b3afa5" stroke-width="5"/><rect x="54" y="92" width="92" height="88" fill="#c4c0b6"/><rect x="54" y="92" width="92" height="7" fill="#b3afa5"/></svg>';
+  const standCard = (title, sq, n) => `<div class="card" aria-hidden="true">${sq ? `<div class="obj">${TOTE}</div>` : '<div class="frame"><div class="mat"><div class="void">Image</div></div></div>'}<span class="by">Artist name</span><h3>${esc(title)}</h3><div class="row"><span>${sq ? 'Made to order' : 'Edition of ' + n}</span><b>$000</b></div></div>`;
+  const CANDLE = '<svg viewBox="0 0 200 200" aria-hidden="true"><rect x="62" y="70" width="76" height="96" rx="6" fill="#c98a3a" opacity=".85"/><rect x="62" y="96" width="76" height="40" fill="#f4f1e4"/><path d="M100 46 C108 56 108 64 100 70 C92 64 92 56 100 46Z" fill="#e9962f"/><rect x="98" y="62" width="4" height="10" fill="#3e4b42"/></svg>';
+  const STAND_PRINTS = ['Title of work','Title of work','Title of work','Title of work','Title of work','Title of work'];
+  const STAND_OBJETS = ['Tote','Tote','Tote','Tote'];
+
+  let LIVE = null;   // { prints:[], objets:[], archive:[], byHandle:{} }
+  let C = { texts: {} };
+  const H = window.HR = {};
+  let editing = false;
+
+  /* ---------- helpers ---------- */
+  const tagVal = (p, key) => { const t = (p.tags || []).find(x => x.toLowerCase().startsWith(key + ':') || x.toLowerCase().startsWith(key + '-')); return t ? t.slice(key.length + 1).trim() : ''; };
+  const edition = p => { const n = tagVal(p, 'edition'); return n ? `Edition of ${n}` : ''; };
+  const img = (p, w) => p.featuredImage ? `<img src="${esc(sized(p.featuredImage.url, w))}" alt="${esc(p.featuredImage.altText || p.title)}" loading="lazy">` : `<div class="void">${esc(p.title)}</div>`;
+  const priceOf = p => { const lo = p.priceRange.minVariantPrice, hi = p.priceRange.maxVariantPrice; return Number(lo.amount) === Number(hi.amount) ? SHOP.money(lo) : 'From ' + SHOP.money(lo); };
+  const isObjet = p => LIVE && (LIVE.objets.includes(p) || LIVE.orangery.includes(p));
+  function card(p, sq){
+    const a = document.createElement('a'); a.className = 'card'; a.href = '#p-' + p.handle;
+    const by = p.vendor && p.vendor.trim() ? `<span class="by">${esc(p.vendor)}</span>` : '';
+    a.innerHTML = `${sq ? `<div class="obj photo">${img(p, 800)}</div>` : `<div class="frame"><div class="mat">${img(p, 800)}</div></div>`}${by}
+      <h3>${esc(p.title)}</h3>
+      <div class="row"><span>${esc(edition(p) || (sq ? 'Made to order' : ''))}</span><b>${p.availableForSale ? esc(priceOf(p)) : '<span class="tagout">Closed</span>'}</b></div>`;
+    return a;
+  }
+
+  /* ---------- views ---------- */
+  const VIEWS = ['home', 'shelf', 'artists', 'house', 'product', 'text'];
+  const TEXTS = { media: ['Media', 'Press, interviews and publications about the house and its artists.'] };
+  function view(v, nav){
+    VIEWS.forEach(x => $('v-' + x).hidden = x !== v);
+    document.body.classList.toggle('glass', nav === 'orangery');
+    document.querySelectorAll('.nav a[data-v]').forEach(a => a.setAttribute('aria-current', String(a.dataset.v === nav)));
+    scrollTo({ top: 0, behavior: 'instant' });
+  }
+  function drawShelf(key){
+    const S = SHELVES[key];
+    $('shKick').textContent = S.kick; $('shTitle').textContent = S.title; $('shLede').textContent = S.lede;
+    const g = $('shGrid'); g.innerHTML = '';
+    const items = (LIVE && LIVE[key]) || [];
+    items.forEach(p => g.appendChild(card(p, key === 'objets' || key === 'orangery')));
+    $('glassNotes').hidden = key !== 'orangery';
+    if (!items.length && SKELETON && LIVE){
+      g.innerHTML = key === 'orangery' ? ['Neroli Under Glass','Bergamot & Fig Leaf','The Pinery','Banana Leaf & Vetiver'].map(t => `<div class="card" aria-hidden="true"><div class="obj">${CANDLE}</div><span class="by">Season artist</span><h3>${esc(t)}</h3><div class="row"><span>Candle · Soap · Eau de parfum</span><b>From $18</b></div></div>`).join('')
+        : key === 'objets' ? STAND_OBJETS.map((t,i) => standCard(t, true)).join('')
+        : key === 'archive' ? STAND_PRINTS.slice(0,3).map(t => standCard(t, false, 25)).join('') : STAND_PRINTS.map(t => standCard(t, false, 50)).join('');
+      g.style.display = '';
+    } else if (!items.length){ const e = document.createElement('p'); e.className = 'empty'; e.textContent = LIVE ? S.empty : 'Loading.'; g.style.display = 'block'; g.appendChild(e); } else g.style.display = '';
+    view('shelf', key);
+  }
+  function drawArtists(focus){
+    const all = LIVE ? [...LIVE.prints, ...LIVE.objets, ...LIVE.archive] : [];
+    const seen = new Set(), works = {};
+    all.forEach(p => { if (seen.has(p.handle)) return; seen.add(p.handle); const k = slug(p.vendor); if (k) (works[k] = works[k] || []).push(p); });
+    const list = ARTISTS.map(a => ({ ...a }));
+    if (SKELETON && !list.length && !Object.keys(works).length) STAND.forEach(a => list.push({ ...a }));
+    Object.keys(works).forEach(k => { if (!list.some(a => slug(a.name) === k)) list.push({ name: works[k][0].vendor, line: '', bio: [] }); });
+    const root = $('artList'); root.innerHTML = '';
+    if (!list.length){ root.innerHTML = '<p class="empty">Artists will be announced.</p>'; }
+    list.forEach(a => {
+      const k = slug(a.name), ws = works[k] || [];
+      const el = document.createElement('article'); el.className = 'artist'; el.id = 'artist-' + k;
+      el.innerHTML = `<div class="who"><span class="kick">Artist</span><h3>${esc(a.name)}</h3>${a.line ? `<p class="line">${esc(a.line)}</p>` : ''}${(a.stand || !a.image) ? `<div class="portrait frame"><div class="mat" style="padding:0;aspect-ratio:3/4">${SIL}</div></div>` : ''}${a.image ? `<div class="portrait frame"><div class="mat" style="padding:0;aspect-ratio:3/4"><img src="${esc(a.image)}" alt="${esc(a.name)}"></div></div>` : ''}</div>
+        <div class="bio">${(a.bio && a.bio.length) ? a.bio.map(t => `<p>${esc(t)}</p>`).join('') : '<p>Biography to follow.</p>'}</div>
+        <div class="works"><span class="kick">Works</span><div class="grid"></div></div>`;
+      const g = el.querySelector('.grid');
+      if (a.stand){ g.innerHTML = standCard('Title of work', false, 50) + standCard('Title of work', false, 50) + standCard('Title of work', false, 25) + standCard('Tote', true); }
+      else if (ws.length) ws.forEach(p => g.appendChild(card(p, isObjet(p)))); else { g.style.display = 'block'; g.innerHTML = '<p class="empty">No works yet.</p>'; }
+      root.appendChild(el);
+    });
+    view('artists', 'artists');
+    if (focus){ const t = $('artist-' + focus); if (t) t.scrollIntoView(); }
+  }
+  function drawProduct(handle){
+    const p = LIVE && LIVE.byHandle[handle]; if (!p) return go('');
+    const where = LIVE.prints.includes(p) ? 'prints' : LIVE.objets.includes(p) ? 'objets' : LIVE.archive.includes(p) ? 'archive' : '';
+    $('pBack').textContent = '← ' + (where ? SHELVES[where].title : 'Back');
+    $('pBack').onclick = () => { location.hash = where || ''; };
+    const imgs = p.images.nodes.length ? p.images.nodes : (p.featuredImage ? [p.featuredImage] : []);
+    const realOpts = p.options.filter(o => o.optionValues.length > 1);
+    const sq = where === 'objets';
+    $('pView').innerHTML = `
+      <div class="gal">
+        <div class="pimg">${imgs[0] ? `<img id="pMain" src="${esc(sized(imgs[0].url, 1400))}" alt="${esc(imgs[0].altText || p.title)}">` : `<div class="void">${esc(p.title)}</div>`}</div>
+        ${imgs.length > 1 ? `<div class="thumbs">${imgs.map((im, i) => `<button type="button" data-i="${i}" aria-current="${i === 0}"><img src="${esc(sized(im.url, 200))}" alt=""></button>`).join('')}</div>` : ''}
+      </div>
+      <div class="pinfo">
+        ${p.vendor ? `<a class="by" href="#artist-${esc(slug(p.vendor))}">${esc(p.vendor)}</a>` : ''}
+        <h2>${esc(p.title)}</h2>
+        ${edition(p) ? `<p class="ed">${esc(edition(p))}</p>` : ''}
+        <p class="pprice" id="pPrice"></p>
+        ${realOpts.map((o, i) => `<div class="opt"><label for="opt${i}">${esc(o.name)}</label><select id="opt${i}" data-name="${esc(o.name)}">${o.optionValues.map(v => `<option>${esc(v.name)}</option>`).join('')}</select></div>`).join('')}
+        <button class="btn solid" id="pAdd" type="button">Add to bag</button>
+        ${p.description ? `<p class="pdesc">${esc(p.description)}</p>` : ''}
+        <p class="pnote">${sq ? 'Made to order.' : 'Giclée print on fine-art paper, framed. Limited edition, numbered, with a certificate of authenticity.'}</p>
+      </div>`;
+    $('pView').querySelectorAll('.thumbs button').forEach(b => b.onclick = () => {
+      const im = imgs[+b.dataset.i]; $('pMain').src = sized(im.url, 1400);
+      $('pView').querySelectorAll('.thumbs button').forEach(x => x.setAttribute('aria-current', String(x === b)));
+    });
+    const pick = () => {
+      const chosen = {}; $('pView').querySelectorAll('select[data-name]').forEach(s => chosen[s.dataset.name] = s.value);
+      return p.variants.nodes.find(v => v.selectedOptions.every(o => !(o.name in chosen) || chosen[o.name] === o.value)) || p.variants.nodes[0];
+    };
+    const sync = () => {
+      const v = pick(); if (!v) return;
+      $('pPrice').textContent = SHOP.money(v.price);
+      $('pAdd').disabled = !v.availableForSale; $('pAdd').textContent = v.availableForSale ? 'Add to bag' : (where === 'archive' ? 'Edition closed' : 'Closed');
+      if (v.image && $('pMain')) $('pMain').src = sized(v.image.url, 1400);
+    };
+    $('pView').querySelectorAll('select').forEach(s => s.onchange = sync); sync();
+    $('pAdd').onclick = async () => {
+      const v = pick(); if (!v || !v.availableForSale) return;
+      $('pAdd').disabled = true; $('pAdd').textContent = 'Adding…';
+      try { drawBag(await SHOP.cart.add(v.id, 1)); openBag(); }
+      catch(e){ say('That could not be added: ' + e.message); }
+      sync();
+    };
+    view('product', where);
+  }
+  function go(h){ location.hash = h; }
+  function route(){
+    const h = location.hash.slice(1);
+    if (h === 'orangery'){ location.replace('https://theorangery.hevilleandrick.com/'); return; }
+    if (SHELVES[h]) drawShelf(h);
+    else if (h === 'artists') drawArtists();
+    else if (h.startsWith('artist-')) drawArtists(h.slice(7));
+    else if (h === 'house') view('house', 'house');
+    else if (TEXTS[h]){ $('txTitle').textContent = TEXTS[h][0]; $('txLede').textContent = TEXTS[h][1]; view('text', h); }
+    else if (h.startsWith('p-') && LIVE) drawProduct(h.slice(2));
+    else view('home', '');
+  }
+  addEventListener('hashchange', route);
+
+  /* ---------- the bag ---------- */
+  const toast = $('toast'); let tt;
+  const say = t => { toast.textContent = t; toast.classList.add('on'); clearTimeout(tt); tt = setTimeout(() => toast.classList.remove('on'), 2600); };
+  const bagPanel = $('bagPanel'), scrim = $('scrim');
+  function openBag(){ bagPanel.classList.add('open'); bagPanel.setAttribute('aria-hidden', 'false'); scrim.hidden = false; $('bagClose').focus(); }
+  function closeBag(){ bagPanel.classList.remove('open'); bagPanel.setAttribute('aria-hidden', 'true'); scrim.hidden = true; }
+  $('bagClose').onclick = closeBag; scrim.onclick = closeBag;
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && bagPanel.classList.contains('open')) closeBag(); });
+  $('bag').addEventListener('click', e => { e.preventDefault(); LIVE ? openBag() : say('The bag opens when the store is reachable.'); });
+  function drawBag(cart){
+    const n = cart ? cart.totalQuantity : 0;
+    $('bag').textContent = `Bag (${n})`;
+    const lines = cart ? cart.lines.nodes : [];
+    $('bagLines').innerHTML = lines.length ? lines.map(l => {
+      const m = l.merchandise, im = m.image || m.product.featuredImage;
+      return `<li>${im ? `<img src="${esc(sized(im.url, 160))}" alt="">` : '<span></span>'}
+        <div><div class="t">${esc(m.product.title)}</div>${!['Default Title','Standard'].includes(m.title) ? `<div class="v">${esc(m.title)}</div>` : ''}
+          <div class="qty"><button type="button" data-l="${esc(l.id)}" data-q="${l.quantity - 1}" aria-label="One fewer">−</button><span>${l.quantity}</span><button type="button" data-l="${esc(l.id)}" data-q="${l.quantity + 1}" aria-label="One more">+</button></div></div>
+        <div>${esc(SHOP.money(l.cost.totalAmount))}</div></li>`;
+    }).join('') : '<li class="bag-empty">Your bag is empty.</li>';
+    $('bagFoot').innerHTML = lines.length
+      ? `<div class="sub"><span>Subtotal</span><span>${esc(SHOP.money(cart.cost.subtotalAmount))}</span></div><small>Shipping and taxes are calculated at checkout.</small><a class="btn solid" href="${esc(cart.checkoutUrl)}">Checkout</a>`
+      : '';
+    $('bagLines').querySelectorAll('[data-l]').forEach(b => b.onclick = async () => {
+      b.disabled = true;
+      try { drawBag(await SHOP.cart.setQty(b.dataset.l, +b.dataset.q)); } catch(e){ say(e.message); b.disabled = false; }
+    });
+  }
+
+  /* ---------- the live store ---------- */
+  async function loadLive(){
+    if (!window.SHOP || !SHOP.ready){ LIVE = { prints: [], objets: [], orangery: [], archive: [], byHandle: {} }; route(); return; }
+    try {
+      const cols = await SHOP.collections();
+      const by = Object.fromEntries(cols.map(c => [c.handle, c]));
+      const L = { prints: [], objets: [], orangery: [], archive: [], byHandle: {} };
+      Object.entries(SHELVES).forEach(([k, S]) => { const col = by[S.handle]; L[k] = col ? col.products.nodes : []; L[k].forEach(p => L.byHandle[p.handle] = p); });
+      Object.values(L.byHandle).forEach(p => {   // fall back to this site's own pictures until Shopify has photos
+        const loc = LOCAL_IMG[p.handle];
+        if (loc && !p.featuredImage){ const n = loc.map(u => ({ url: u, altText: p.title })); p.featuredImage = n[0]; p.images = { nodes: n }; }
+      });
+      LIVE = L;
+      route();
+      drawBag(await SHOP.cart.get());
+    } catch(e){ console.warn('store', e); LIVE = { prints: [], objets: [], orangery: [], archive: [], byHandle: {} }; route(); }
+  }
+
+  /* ---------- text saved in the editor ---------- */
+  window.HR_apply = content => {
+    if (!content || !content.texts) return;
+    C.texts = content.texts;
+    Object.entries(C.texts).forEach(([k, v]) => { if (!k.startsWith('h2-')) return; const el = document.querySelector(`[data-edit="${k}"]`); if (el) el.innerHTML = v; });
+  };
+  H.content = () => C;
+
+  /* text saved in the editor on the main site: read it straight from the table so no publish step is needed */
+  fetch('https://adwiuntamengcvzhsozp.supabase.co/rest/v1/site_texts?key=eq.heville&select=body', { headers: { apikey: 'sb_publishable_weS66qKdA5vOImMw_Xf49Q_p8Uymdt_' } })
+    .then(r => r.ok ? r.json() : []).then(rows => { if (rows[0] && rows[0].body && !editing) window.HR_apply(JSON.parse(rows[0].body)); }).catch(() => {});
+
+  route();       // the home page at once, shelves once the store answers
+  loadLive();
+
+  /* ---------- owner editing (text) ---------- */
+  try {
+    if (Object.keys(sessionStorage).some(k => /^sb-.*-auth-token$/.test(k))){
+      const pill = document.createElement('button'); pill.className = 'hr-edit-pill'; pill.textContent = 'Edit page';
+      pill.onclick = () => { pill.remove(); startEditing(); };
+      document.body.appendChild(pill);
+    }
+  } catch(e){}
+  async function startEditing(){
+    const bar = document.createElement('div'); bar.className = 'hr-bar'; bar.innerHTML = '<span id="hrMsg">Loading the editor…</span>'; document.body.appendChild(bar);
+    const msg = t => { const m = $('hrMsg'); if (m) m.textContent = t; };
+    try { await new Promise((ok, bad) => { const sc = document.createElement('script'); sc.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js'; sc.onload = ok; sc.onerror = bad; document.head.appendChild(sc); }); }
+    catch(e){ msg('The editor could not load.'); return; }
+    const sb = window.supabase.createClient('https://adwiuntamengcvzhsozp.supabase.co', 'sb_publishable_weS66qKdA5vOImMw_Xf49Q_p8Uymdt_', { auth: { storage: window.sessionStorage } });
+    const { data: { session } } = await sb.auth.getSession();
+    if (!session){ msg('Editing is done from the copy of this page on liorsollyshachar.com, after logging in there.'); return; }
+    const { data: row } = await sb.from('site_texts').select('body').eq('key', 'heville').maybeSingle();
+    if (row && row.body){ try { window.HR_apply(JSON.parse(row.body)); } catch(e){} }
+    editing = true; document.body.classList.add('hr-editing');
+    document.querySelectorAll('[data-edit]').forEach(el => { el.contentEditable = 'true'; el.onclick = e => e.preventDefault(); el.oninput = () => msg('Unsaved changes.'); });
+    bar.innerHTML = `<span>Click any text to change it.</span><button id="hrSave" type="button">Save page</button><button id="hrStop" type="button">Stop editing</button><span id="hrMsg"></span>`;
+    $('hrSave').onclick = async () => {
+      const texts = {}; document.querySelectorAll('[data-edit]').forEach(el => { texts[el.dataset.edit] = el.innerHTML.replace(/<(?!\/?(em|i|b|strong|br)\b)[^>]*>/gi, '').trim(); });
+      const { error } = await sb.from('site_texts').upsert({ key: 'heville', body: JSON.stringify({ texts }) });
+      $('hrMsg').textContent = error ? 'Not saved: ' + error.message : 'Saved. hevilleandrick.com shows it on the next visit.';
+    };
+    $('hrStop').onclick = () => location.reload();
+  }
+})();
+</script>
+<!--HR-CONTENT-->
+</body>
+</html>
