@@ -739,10 +739,6 @@ window.SHOP = (() => {
   };
   H.content = () => C;
 
-  /* text saved in the editor on the main site: read it straight from the table so no publish step is needed */
-  fetch('https://adwiuntamengcvzhsozp.supabase.co/rest/v1/site_texts?key=eq.heville&select=body', { headers: { apikey: 'sb_publishable_weS66qKdA5vOImMw_Xf49Q_p8Uymdt_' } })
-    .then(r => r.ok ? r.json() : []).then(rows => { if (rows[0] && rows[0].body && !editing) window.HR_apply(JSON.parse(rows[0].body)); }).catch(() => {});
-
   route();       // the home page at once, shelves once the store answers
   loadLive();
 
